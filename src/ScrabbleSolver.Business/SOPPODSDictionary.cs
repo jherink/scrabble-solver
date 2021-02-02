@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ScrabbleSolver.Business
 {
+    /// <summary>
+    /// Stores the data for the Scrabble dictionary
+    /// </summary>
     public class SOPPODSDictionary
     {
         #region Singleton
@@ -25,6 +28,10 @@ namespace ScrabbleSolver.Business
         private string[ ] _dictionary;
         private Algorithms.ScrabbleTree _tree;
 
+        /// <summary>
+        /// Load the dictionary
+        /// </summary>
+        /// <returns></returns>
         public Task<string[]> Load()
         {
             return Task.Run( async () =>
@@ -35,44 +42,11 @@ namespace ScrabbleSolver.Business
                     var client = new HttpClient();
                     // In reality this would not be hardcoded but read from config file or some sort of
                     // startup API call that would return this path.
-                    var response = await client.GetAsync( "https://s3.amazonaws.com/codechef_shared/download/NOV15/SCRABBLE.txt" );
+                    var response = await client.GetAsync( "https://raw.githubusercontent.com/jherink/scrabble-solver/main/SOPPODSDictionary.txt" );
 
                     if ( response.IsSuccessStatusCode )
                     {
                         _dictionary = response.Content.ReadAsStringAsync().Result.Split( '\n' );
-
-                        /*_dictionary = new string[ ]
-                        {
-"AA",
-"AAH",
-"AAHED",
-"AAHING",
-"AAHS",
-"AAL",
-"AALII",
-"AALIIS",
-"AALS",
-"AARDVARK",
-"AARDVARKS",
-"AARDWOLF",
-"AARDWOLVES",
-"AARGH",
-"AARRGH",
-"AARRGHH",
-"AARTI",
-"AARTIS",
-"AAS",
-"AASVOGEL",
-"AASVOGELS",
-"AB",
-"ABA",
-"ABAC",
-"ABACA",
-"ABACAS",
-"ABACI",
-"ABACK",
-"ABACS"
-                        };*/
 
                         _tree = new Algorithms.ScrabbleTree();
 #if DEBUG

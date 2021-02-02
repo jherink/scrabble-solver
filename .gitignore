@@ -1,0 +1,16 @@
+# Ignore `bin` dir
+bin/
+# or
+*/bin/*
+# Ignore `obj` dir
+obj/
+# or
+*/obj/*
+
+# Ignore `xs` dir
+xs/
+# or
+*/xs/*
+
+src/.DS_Store
+.DS_Store

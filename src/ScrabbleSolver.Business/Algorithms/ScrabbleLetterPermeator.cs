@@ -3,8 +3,17 @@ using System.Collections.Generic;
 
 namespace ScrabbleSolver.Business.Algorithms
 {
+    /// <summary>
+    /// Tool to permiate a string
+    /// </summary>
     public class ScrabbleLetterPermeator
     {
+        /// <summary>
+        /// Return a list of string permiation for the given string (and possibly substrings)
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="includeSubstrings"></param>
+        /// <returns></returns>
         public IEnumerable<string> Permiate( string str, bool includeSubstrings = false )
         {
             if ( includeSubstrings )
