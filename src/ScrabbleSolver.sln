@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleSolver.Console", "ScrabbleSolver.Console\ScrabbleSolver.Console.csproj", "{00D7079D-4F79-4F5E-A3F2-EBC99DFFA224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleSolver.Business", "ScrabbleSolver.Business\ScrabbleSolver.Business.csproj", "{DCC9EBBC-E48B-44F4-8237-F5CEBD027827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00D7079D-4F79-4F5E-A3F2-EBC99DFFA224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D7079D-4F79-4F5E-A3F2-EBC99DFFA224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D7079D-4F79-4F5E-A3F2-EBC99DFFA224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D7079D-4F79-4F5E-A3F2-EBC99DFFA224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC9EBBC-E48B-44F4-8237-F5CEBD027827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC9EBBC-E48B-44F4-8237-F5CEBD027827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC9EBBC-E48B-44F4-8237-F5CEBD027827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC9EBBC-E48B-44F4-8237-F5CEBD027827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A208D498-EB62-4AAC-8DA0-A51321EF9081}
+	EndGlobalSection
+EndGlobal
